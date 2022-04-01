@@ -1,0 +1,231 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  
+  
+}
+
+nav li{
+  list-style: none;
+
+
+ 
+}
+
+/* nav>ul>li{
+  
+
+  
+} */
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+
+.nav1{
+  height: 50px;
+  line-height: 30px;
+
+  background-color: rgb(6, 97, 6);
+  
+}
+.nav li{
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.nav1 a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.nav1Right{
+  padding-left: 700px;
+} 
+
+.nav2{
+  height: 100px;
+  /* background-color: yellow; */
+  line-height: 50px;
+}
+
+.nav2 a{
+  text-decoration: none;
+  color: rgb(6, 97, 6);
+  font-weight: bold;
+}
+.nav2 img{
+
+  height: 50px;
+  width: 100px;
+
+}
+.nav2 li{
+  padding-left: 100px;
+}
+  
+  
+  
+  
+  
+  .start{
+       height: 100vh; 
+       
+     display: flex;
+    justify-content: center;
+    align-items: center; 
+  
+     background-image: url("images/IMG_20201014_124654.jpg");
+    background-size: 100% 100%;
+    background-position: center; 
+  
+  
+  }
+  
+  .user{
+      border: 2px solid rgb(0, 0, 0);
+     padding: 5px;
+     background-color: white;
+     color: black;
+
+   
+  
+  }
+  
+   .signup{
+      box-shadow: 10px 10px 20px gray;
+      padding: 50px;
+       
+      background-color: rgba(0, 0, 0, 0.541);
+      border-radius: 10px;
+      color: white;
+  }
+  p{
+      padding: 10px;
+  }
+  p>input{
+      border-radius: 3px;
+      font-size: 18px;
+      padding: 7px;
+      font-weight: 700;
+  }
+  h3{
+      font-size: larger;
+  }
+ 
+  .reg{
+      
+      background-image: linear-gradient(45deg,gold,orange );
+  }
+  
+  .reg:hover{
+      background-image:linear-gradient(45deg,goldenrod,red);
+      font-size: 20px;
+  
+  }
+  
+  
+  
+ 
+@media (max-width:1175px) {
+  .nav1Right{
+      padding-left: 200px;
+  }
+  .nav2 li{
+      padding-left:20px ;
+  }
+
+
+ 
+  
+}
+
+@media  (max-width: 760px){
+
+.box{
+    width: 35%;
+    overflow: scroll;
+}
+.button-container{
+    flex-direction: column;
+
+}
+
+
+.nav2 li{
+    padding-left: 10px;
+    padding-top: 0px;
+    
+}
+.nav1 li{
+    padding-left: 30px;
+}
+.nav1Right{
+    padding-left: 30px;
+}
+
+.blog{
+    margin-top: 20px;
+}
+
+
+  
+  
+
+
+
+  
+}
+
+@media  (max-width: 420px){
+
+  .box{
+      width: 35%;
+      overflow: scroll;
+  }
+  .button-container{
+      flex-direction: column;
+
+  }
+
+  
+  .nav2 li{
+      padding-left: 5px;
+  }
+  .nav1 li{
+      padding-left: 15px;
+  }
+  .nav1Right{
+      padding-left: 15px;
+  }
+  
+    
+    
+
+
+
+    
+}
+
+@media (max-width:970px ) {
+    .Linkbutton2{
+        font-size: small;
+        background-color: white;
+        background-image: none;
+        color: black;
+    }
+    
+}
+
+
+
+
+
+    
+    

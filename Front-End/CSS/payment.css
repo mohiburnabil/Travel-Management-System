@@ -1,0 +1,236 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+  
+  
+}
+
+nav li{
+  list-style: none;
+
+
+ 
+}
+
+/* nav>ul>li{
+  
+
+  
+} */
+.nav{
+  display: flex;
+  flex-wrap: wrap;
+ 
+}
+
+
+.nav1{
+  height: 50px;
+  line-height: 30px;
+
+  background-color: rgb(6, 97, 6);
+  
+}
+.nav li{
+  padding-left: 40px;
+  padding-top: 10px;
+}
+
+.nav1 a{
+  text-decoration: none;
+  color: white;
+}
+
+
+.nav1Right{
+  padding-left: 700px;
+} 
+
+.nav2{
+  height: 100px;
+  /* background-color: yellow; */
+  line-height: 50px;
+}
+
+.nav2 a{
+  text-decoration: none;
+  color: rgb(6, 97, 6);
+  font-weight: bold;
+}
+.nav2 img{
+
+  height: 50px;
+  width: 100px;
+
+}
+.nav2 li{
+  padding-left: 100px;
+}
+
+
+
+
+
+.start{
+
+  padding-top: 10px;
+     
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+
+
+}
+
+
+
+ .box{
+    box-shadow: 10px 10px 20px gray;
+    padding: 50px;
+     
+    background-color: white;
+    border-radius: 10px;
+    color: #15181b;
+    text-transform: uppercase;
+    height: 600px;
+    margin-bottom: 50px;
+    font-size: larger;
+}
+
+.container{
+  display: flex;
+  
+}
+
+h4{
+  padding-top: 50px;
+}
+.payment{
+  margin-left: 80px;
+  
+}
+
+.button{
+
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: #27ae60;
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+  margin-top: 30px;
+  
+
+
+}
+
+.button:hover{
+  background: #2ecc71;
+}
+
+
+
+
+
+
+
+@media (max-width:1175px) {
+  .nav1Right{
+      padding-left: 200px;
+  }
+  .nav2 li{
+      padding-left:20px ;
+  }
+
+
+ 
+  
+}
+
+@media  (max-width: 760px){
+
+.box{
+    width: 35%;
+    overflow: scroll;
+}
+.button-container{
+    flex-direction: column;
+
+}
+
+
+.nav2 li{
+    padding-left: 10px;
+    padding-top: 0px;
+    
+}
+.nav1 li{
+    padding-left: 30px;
+}
+.nav1Right{
+    padding-left: 30px;
+}
+
+.blog{
+    margin-top: 20px;
+}
+
+
+  
+  
+
+
+
+  
+}
+
+@media  (max-width: 420px){
+
+  .box{
+      width: 35%;
+      overflow: scroll;
+  }
+  .button-container{
+      flex-direction: column;
+
+  }
+
+  
+  .nav2 li{
+      padding-left: 5px;
+  }
+  .nav1 li{
+      padding-left: 15px;
+  }
+  .nav1Right{
+      padding-left: 15px;
+  }
+  
+    
+    
+
+
+
+    
+}
+
+@media (max-width:970px ) {
+    .Linkbutton2{
+        font-size: small;
+        background-color: white;
+        background-image: none;
+        color: black;
+    }
+    
+}
+
+
+
+
+
+    
+    

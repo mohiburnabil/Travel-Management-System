@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+   {% block title %}Sign Up{% endblock %}
+    
+
+{% block content %}
+    {% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+       <h3> <li>{{ message }}</li></h3>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <section class="start">
+    <div class="signup">
+        <h2>Log in Now</h2>
+        <form method="POST" action="">
+            {% csrf_token %}
+
+           <p><input type="text" name = "username" placeholder="Enter your Email or User Name" required></p>
+         
+            
+               <p><input type="password" name = "password" placeholder="Create password" required></p> 
+   
+      
+    
+                <p><input class="reg" type="submit" value="Log in" ></p>
+                <!-- <p class="user" >Log in as <input  type="radio" name="user" required> Tourist <input type="radio" name="user" required> Company</p> -->
+         
+                <a style="color:white;text-decoration:none" target="_blank" href="">Forgotten password?</a>
+          
+        </form>
+    </div>
+</section>
+{% endblock %}
+

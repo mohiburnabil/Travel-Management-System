@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block style %} 
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+{% endblock %}
+{% block content %}
+
+<div id="carousel-example-1z" class="carousel slide carousel-fade" data-ride="carousel">
+
+    <ol class="carousel-indicators">
+    {% for p in photos %}
+      <li data-target="#carousel-example-1z" data-slide-to="{{ forloop.counter0 }}" class="{% if forloop.counter0 == 0 %} active {% endif %}"></li>
+    {% endfor %}
+    </ol>
+  
+    <div class="carousel-inner" role="listbox">
+      {% for p in photos %}
+      <div class="carousel-item {% if forloop.counter0 == 0 %} active {% endif %}">
+        <img class="d-block w-100" src="{{p.image.url}}"
+          alt="First slide">
+      </div>
+      {% endfor %}
+
+    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+ 
+  </div>
+</div>
+<div class="container">
+    <div class="container">
+     <h3>Blogger:   <a href="{% url 'profile' blog.blogger.id  %}">{{blog.blogger}}</a> </h3> 
+    </div>
+   
+   <div class="container"> <h3> Location: {{blog.place}} </h3> </div>
+    <h3>{{blog.description}} </h3>
+    
+
+    
+</div>
+<div class="container">
+  <h4>Comments</h4>
+  {% for comment in comments %}
+     <div class="container">
+       <pre>
+        <h6> @{{comment.traveller.user}}[{{comment.created_at|timesince}} ago] </h6>
+        {{comment.comment}}
+       </pre>
+     
+      </div>
+      
+   
+
+     
+  {% endfor %}
+  {% if request.user.is_authenticated %}
+  <div>
+    <form action="" method="POST">
+      {% csrf_token %}
+      <input type="text" name = 'comment' placeholder="write your comment here" class="form-control">
+    </form>
+  </div>
+{% endif %}
+</div>
+  {% endblock %}

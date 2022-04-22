@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+<title>{% block title %} Goheen {% endblock %}</title>
+
+{% block content %} 
+
+<button ><a href="{% url 'createblog' %}">Create blog </a></button>
+<div class="blog">
+
+    {% for blog in blogs %}
+   
+    <div class="container row">
+        <div class="box">
+    
+        <h3><a href="{% url 'profile' blog.blogger.id %}">@{{ blog.blogger.user }}</a> | TRAVELER </h3>
+        <h2 class="head">Location: {{ blog.place }}</h2>
+         <!-- {% for img in blog.blogimages_set.all %}
+        <img class="blog_image" src={{img.image.url}} alt="worng">
+           {% endfor %}
+        <p> -->
+            {{ blog.description|truncatechars:100 }}
+        </p>
+        <div class="button-container">
+            <a class="read-blog"  href="{% url 'blog_details' blog.id %}">Read Full Blog</a>
+            <a class="see-packages"  href="{% url 'packages' %}?q={{blog.place}}">See Packages</a>
+            </div>
+            <div class="button-container">
+            {% if request.user == blog.blogger.user %}
+            <a class="see-packages"  href="{% url 'updateblog' blog.id %}">update blog</a>
+            <a class="see-packages"  href="{% url 'delete' blog.id %}">delete blog</a>
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+  
+<div class="row">
+
+
+    {% endfor %}
+    
+</div>
+</div>
+
+  
+
+{% endblock %}

@@ -1,0 +1,47 @@
+
+{% load static %}
+<header>
+    <div class="nav1">
+        <nav>
+            <ul class="nav">
+                <li><a href="https://www.facebook.com/shah.riar.52687/">f</a></li>
+                <li><a href="https://twitter.com/shatil_shahriar">t</a></li>
+                <li><a href="https://mail.google.com/mail/u/0/#inbox">info@goheen.com</a></li>
+                {% if request.user.is_authenticated %}
+                {% if request.user.agencymember.user_type == 'agency_member' %}
+
+                 {% else %}
+                <li><a class="nav1Right" href="{% url 'profile' request.user.traveller.id %}">Profile</a></li>
+                
+                  {% endif %}
+                  <li><a  href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                <li><a class="nav1Right" href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'signup' %}">Sign Up</a></li>
+
+                {% endif %}
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="nav2">
+        <nav>
+            <ul class="nav">
+                <li><img src="{% static 'goheen/Images/logo.png' %}" alt=""></li>
+                <li><a href="{% url 'homepage' %}">Home</a></li> 
+                {% if request.user.agencymember.user_type == 'agency_member' %}
+                        <li><a href="{% url 'packages' %}?q={{request.user.agencymember.agency.company_name}}">Packages</a></li>
+                        {% else %}
+                        <li><a href="{% url 'packages' %}">Packages</a></li>
+
+                        {% endif %}
+                
+                <li><a href="{% url 'about' %}">About</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
+
+            </ul>
+        </nav>
+    </div>
+
+</header> 

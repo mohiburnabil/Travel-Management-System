@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+   {% block title %}Packages{% endblock %}
+   {% block style %}
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   {% endblock %}
+
+    <link rel="shortcut icon" href="Images/logo.png" type="image/x-icon">
+  
+    {% block content %}
+    {% if request.user.traveller.user_type != "Traveller" %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 bg-light text-right">
+                <button class="btn btn-warning"><a href="{% url 'createpackage' %}">+ Add Package</a></button>
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+<div class="container">
+  
+    <form >
+        
+ 
+     
+      
+        <input type="text" name="q" placeholder="search packages"  class="form-control">
+       
+       
+        <h3>{{total_packages}} packages available</h3>
+    </form>
+       {% for Package in packages %}       
+    
+      <span class="container">
+          <span class="box1">
+              <h1 >{{Package.place}}</h1>
+              <h4>For {{Package.duration}} days</h4>
+              
+              <span class="container">
+              
+                  <a class="see-packages" href="{% url 'packagedetails' Package.id %}">Package Details</a>
+              </span>
+          </span>
+  
+      </span>
+</div>
+   
+        {% endfor %}
+    <div class="page-number">
+        <a class="pnum" target="_blank" href="">1</a>
+        <a class="pnum" target="_blank" href="">2</a>
+        <a class="pnum" target="_blank" href="">3</a>
+        <a class="pnum" target="_blank" href="">4</a>
+        <a class="pnum" target="_blank" href="">5</a>
+        <a class="pnum" target="_blank" href="">6</a>
+    </div>
+    
+  
+    {% endblock %}
+  
+
+  

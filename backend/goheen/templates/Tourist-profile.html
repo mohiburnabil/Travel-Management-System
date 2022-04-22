@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %} {{user}} {% endblock %}
+
+{% block content %}
+
+
+
+
+       <img class="pp" src="{{user.profile_pic.url}}" alt=""  height="250px">
+       <div class="Center">
+        <h1 class="pad color">Tourist Description</h1>
+        <h3 class="pad">Name: {{user}}</h3>
+
+
+        <h1 class="pad color">Tourist Contact Information</h1>
+      
+        <h3 class="pad">Mobile :{{user.phone_number}}</h3>
+        <h3 class="pad">E-mail :{{user.user.email}}</a></h3>
+       </div>
+     
+
+ 
+
+{% endblock %}
+ 

@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    
+    
+}
+
+nav li{
+    list-style: none;
+  
+
+   
+}
+
+/* nav>ul>li{
+    
+ 
+    
+} */
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+
+.nav1{
+    height: 50px;
+    line-height: 30px;
+
+    background-color: rgb(6, 97, 6);
+    
+}
+.nav li{
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.nav1 a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.nav1Right{
+    padding-left: 700px;
+} 
+
+.nav2{
+    height: 100px;
+    /* background-color: yellow; */
+    line-height: 50px;
+}
+
+.nav2 a{
+    text-decoration: none;
+    color: rgb(6, 97, 6);
+    font-weight: bold;
+}
+.nav2 img{
+  
+    height: 50px;
+    width: 100px;
+ 
+}
+.nav2 li{
+    padding-left: 100px;
+}
+  
+  
+  
+  
+.upper-pic{
+    width: 45%;
+    padding-left: 40px;
+}
+
+.pic{
+    display: flex;
+    padding:50px
+}
+
+.box1{
+ 
+    width: 45%;
+    padding-left: 45px;
+}
+
+.box2{
+    width: 45%;
+    padding-left: 45px;
+}
+.essay{
+    display: flex;
+    padding: 50px;
+}
+
+.end2{
+    text-align: center;
+    background-image: linear-gradient(135deg,yellow,orange);
+
+}
+
+.contact{
+    color: green;
+    text-align: center;
+    font-size: larger;
+    padding: 40px 0px;
+}
+
+.Linkbutton2{
+ 
+    text-align: left;
+    border: 5px solid linear-gradient(45deg,yellow,orange);
+    margin: 10px 30px;
+    margin-right: 1000px;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg,yellow,orange);
+    color: white;
+    padding: 10px 20px; 
+  
+
+    
+ 
+
+}
+
+
+
+@media (max-width:1175px) {
+    .nav1Right{
+        padding-left: 200px;
+    }
+    .nav2 li{
+        padding-left:20px ;
+    }
+
+
+   
+    
+}
+
+@media  (max-width: 760px){
+
+  .box{
+      width: 35%;
+      overflow: scroll;
+  }
+  .button-container{
+      flex-direction: column;
+
+  }
+
+  
+  .nav2 li{
+      padding-left: 10px;
+      padding-top: 0px;
+      
+  }
+  .nav1 li{
+      padding-left: 30px;
+  }
+  .nav1Right{
+      padding-left: 30px;
+  }
+  
+  .blog{
+      margin-top: 20px;
+  }
+
+
+    
+    
+
+
+
+    
+}
+
+@media  (max-width: 420px){
+
+    .box{
+        width: 35%;
+        overflow: scroll;
+    }
+    .button-container{
+        flex-direction: column;
+  
+    }
+  
+    
+    .nav2 li{
+        padding-left: 5px;
+    }
+    .nav1 li{
+        padding-left: 15px;
+    }
+    .nav1Right{
+        padding-left: 15px;
+    }
+    
+      
+      
+  
+  
+  
+      
+  }
+
+  @media (max-width:970px ) {
+      .Linkbutton2{
+          font-size: small;
+          background-color: white;
+          background-image: none;
+          color: black;
+      }
+      
+  }
+
+
+
+ 
+
+      
+      

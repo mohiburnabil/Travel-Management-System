@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section h1{
+    padding: 30px;
+}
+
+.pp{
+  display: block;
+  margin-left:auto;
+  margin-right: auto;
+  width: 20%;
+
+}
+
+.upper{
+    display: flex;
+}
+
+.pad{
+    padding-left: 50px;
+}
+.color{
+    color: white;
+    font-weight: bolder;
+}
+
+.bimage{
+    background-image: url("images/IMG_20201014_124654.jpg");
+}
+   
+
+.end2{
+    text-align: center;
+    
+    padding-top: 50px;
+
+}
+
+section{
+    padding-bottom: 20px;
+}
+
+
+.Linkbutton2{
+ 
+    text-align: left;
+    border: 5px solid linear-gradient(45deg,yellow,orange);
+    margin: 10px 30px;
+    margin-right: 1000px;
+    border-radius: 5px;
+    background-image: linear-gradient(45deg,yellow,orange);
+    color: white;
+    padding: 10px 20px; 
+  
+
+    
+ 
+
+}
+.Center{
+    text-align: center;
+}
+
+@media  (max-width: 760px){
+
+    .box{
+        width: 35%;
+        overflow: scroll;
+    }
+    .button-container{
+        flex-direction: column;
+  
+    }
+  
+    
+    .nav2 li{
+        padding-left: 10px;
+        padding-top: 0px;
+        
+    }
+    .nav1 li{
+        padding-left: 30px;
+    }
+    .nav1Right{
+        padding-left: 30px;
+    }
+    
+    .blog{
+        margin-top: 20px;
+    }
+  
+  
+      
+      
+  
+  
+  
+      
+  }
+  
+  @media  (max-width: 420px){
+  
+      .box{
+          width: 35%;
+          overflow: scroll;
+      }
+      .button-container{
+          flex-direction: column;
+    
+      }
+    
+      
+      .nav2 li{
+          padding-left: 5px;
+      }
+      .nav1 li{
+          padding-left: 15px;
+      }
+      .nav1Right{
+          padding-left: 15px;
+      }
+      
+        
+        
+    
+    
+    
+        
+    }
+  
+    @media (max-width:970px ) {
+        .Linkbutton2{
+            font-size: small;
+            background-color: white;
+            background-image: none;
+            color: black;
+        }
+        
+    }
+  
+  
+  
+   
+  
+        
+        
+  
+
